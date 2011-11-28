@@ -8,14 +8,12 @@
 
 #import "DBTest.h"
 
-#import "DBLoginController.h"
 #import "DBSession.h"
 
 @implementation DBTest
 
 @synthesize window;
 @synthesize linkButton;
-@synthesize loginController;
 
 - (void) applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -24,12 +22,19 @@
 
 - (void) awakeFromNib
 {
-    // Set these variables before launching the app
-    NSString *consumerKey = @"<YOUR CONSUMER KEY>";
-	NSString *consumerSecret = @"<YOUR CONSUMER SECRET>";
+    /*
+     * Set these variables before launching the app, you also need to update DBTest/Info.plist:
+     * URL Types[0] -> URL Schemes -> db-<appKey>
+     *
+     * You can find your app key and app secret at https://www.dropbox.com/developers/apps under your specific app.
+     */
+     
+    NSString *appKey = @"<YOUR APPLICATION KEY>";
+	NSString *appSecret = @"<YOUR APPLICATION SECRET>";
     
-	DBSession *session =  [[DBSession alloc] initWithConsumerKey:consumerKey
-                                                  consumerSecret:consumerSecret];
+	DBSession *session =  [[DBSession alloc] initWithAppKey:appKey
+                                                  appSecret:appSecret
+                                                       root:kDBRootDropbox];
 	[session setDelegate:self];
 	[DBSession setSharedSession:session];
     [session release];
@@ -41,15 +46,13 @@
 {
     if ([[DBSession sharedSession] isLinked])
     {
-        [[DBSession sharedSession] unlink];
+        [[DBSession sharedSession] unlinkAll];
         [self updateLinkTitle];
     }
     else
     {
         [linkButton setEnabled:NO];
-        [self setLoginController:[[[DBLoginController alloc] init] autorelease]];
-        [loginController setDelegate:self];
-        [loginController presentFrom:window];
+        [[DBSession sharedSession] link];
     }
 }
 
@@ -67,23 +70,10 @@
 
 #pragma mark Delegate methods
 
-- (void) sessionDidReceiveAuthorizationFailure:(DBSession *)session
+- (void)sessionDidReceiveAuthorizationFailure:(DBSession *)session userId:(NSString *)userId
 {
     [self updateLinkTitle];
     [self link:nil];
-}
-
-- (void) controllerDidComplete:(DBLoginController *)window
-{
-    [self setLoginController:nil];
-    [linkButton setEnabled:YES];
-    [self updateLinkTitle];
-}
-
-- (void) controllerDidCancel:(DBLoginController *)window
-{
-    [self setLoginController:nil];
-    [linkButton setEnabled:YES];
 }
 
 @end

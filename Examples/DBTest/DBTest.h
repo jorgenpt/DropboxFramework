@@ -7,17 +7,14 @@
 //
 
 #import "DBSession.h"
-#import "DBLoginController.h"
 
-@interface DBTest : NSObject <DBSessionDelegate, DBCommonControllerDelegate> {
+@interface DBTest : NSObject <DBSessionDelegate> {
     NSWindow *window;
     NSButton *linkButton;
-    DBLoginController *loginController;
 }
 
 @property (nonatomic, assign) IBOutlet NSWindow *window;
 @property (nonatomic, assign) IBOutlet NSButton *linkButton;
-@property (nonatomic, retain) DBLoginController *loginController;
 
 - (void) awakeFromNib;
 - (IBAction) link:(id)sender;

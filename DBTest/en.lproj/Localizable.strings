@@ -1,0 +1,11 @@
+/* 
+   Localizable.strings
+   DropboxFramework
+
+   Created by Jørgen P. Tjernø on 1/27/11.
+   Copyright 2011 devSoft. All rights reserved.
+ */
+
+/* Link and unlink account buttons. */
+"Link" = "Link";
+"Unlink" = "Unlink";

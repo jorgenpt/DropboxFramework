@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C541F31F14830D1B0045D502 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58D52BC148306840084276B /* Cocoa.framework */; };
+		C541F32514830D1B0045D502 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C541F32314830D1B0045D502 /* InfoPlist.strings */; };
+		C541F32814830D1B0045D502 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C541F32714830D1B0045D502 /* main.m */; };
+		C541F32B14830D1B0045D502 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C541F32914830D1B0045D502 /* Credits.rtf */; };
+		C541F32E14830D1B0045D502 /* DBTestAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C541F32D14830D1B0045D502 /* DBTestAppDelegate.m */; };
+		C541F33114830D1B0045D502 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C541F32F14830D1B0045D502 /* MainMenu.xib */; };
 		C58D52BD148306840084276B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58D52BC148306840084276B /* Cocoa.framework */; };
 		C58D52CD1483069F0084276B /* DBAccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D387581214135C3E0013E17C /* DBAccountInfo.m */; };
 		C58D52CE1483069F0084276B /* DBDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = D387581314135C3E0013E17C /* DBDefines.h */; };
@@ -155,8 +161,29 @@
 		D38758AF14135C3E0013E17C /* UIAlertView+Dropbox.m in Sources */ = {isa = PBXBuildFile; fileRef = D387586214135C3E0013E17C /* UIAlertView+Dropbox.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C541F33514830D280045D502 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C58D52BA148306840084276B;
+			remoteInfo = Dropbox;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C541F31514830CFC0045D502 /* DBTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTest.h; sourceTree = "<group>"; };
+		C541F31614830CFC0045D502 /* DBTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTest.m; sourceTree = "<group>"; };
+		C541F31D14830D1B0045D502 /* DBTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C541F32214830D1B0045D502 /* DBTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBTest-Info.plist"; sourceTree = "<group>"; };
+		C541F32414830D1B0045D502 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C541F32614830D1B0045D502 /* DBTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DBTest-Prefix.pch"; sourceTree = "<group>"; };
+		C541F32714830D1B0045D502 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C541F32A14830D1B0045D502 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C541F32C14830D1B0045D502 /* DBTestAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBTestAppDelegate.h; sourceTree = "<group>"; };
+		C541F32D14830D1B0045D502 /* DBTestAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBTestAppDelegate.m; sourceTree = "<group>"; };
+		C541F33014830D1B0045D502 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C58D52BB148306840084276B /* Dropbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dropbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C58D52BC148306840084276B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C58D52BF148306840084276B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -245,6 +272,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C541F31A14830D1B0045D502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C541F31F14830D1B0045D502 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C58D52B7148306840084276B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +304,7 @@
 			children = (
 				D3196B831412FE180060E7C6 /* DropboxSDK.framework */,
 				C58D52BB148306840084276B /* Dropbox.framework */,
+				C541F31D14830D1B0045D502 /* DBTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,8 +312,10 @@
 		0867D691FE84028FC02AAC07 /* DropboxSDK */ = {
 			isa = PBXGroup;
 			children = (
+				C541F31314830CFC0045D502 /* Examples */,
 				D387581114135C3E0013E17C /* Classes */,
 				C58D52C2148306840084276B /* Dropbox */,
+				C541F32014830D1B0045D502 /* DBTest */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -295,6 +333,46 @@
 				C58D52BE148306840084276B /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C541F31314830CFC0045D502 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C541F31414830CFC0045D502 /* DBTest */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		C541F31414830CFC0045D502 /* DBTest */ = {
+			isa = PBXGroup;
+			children = (
+				C541F31514830CFC0045D502 /* DBTest.h */,
+				C541F31614830CFC0045D502 /* DBTest.m */,
+			);
+			path = DBTest;
+			sourceTree = "<group>";
+		};
+		C541F32014830D1B0045D502 /* DBTest */ = {
+			isa = PBXGroup;
+			children = (
+				C541F32C14830D1B0045D502 /* DBTestAppDelegate.h */,
+				C541F32D14830D1B0045D502 /* DBTestAppDelegate.m */,
+				C541F32F14830D1B0045D502 /* MainMenu.xib */,
+				C541F32114830D1B0045D502 /* Supporting Files */,
+			);
+			path = DBTest;
+			sourceTree = "<group>";
+		};
+		C541F32114830D1B0045D502 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C541F32214830D1B0045D502 /* DBTest-Info.plist */,
+				C541F32314830D1B0045D502 /* InfoPlist.strings */,
+				C541F32614830D1B0045D502 /* DBTest-Prefix.pch */,
+				C541F32714830D1B0045D502 /* main.m */,
+				C541F32914830D1B0045D502 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C58D52BE148306840084276B /* Other Frameworks */ = {
@@ -544,6 +622,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C541F31C14830D1B0045D502 /* DBTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C541F33214830D1B0045D502 /* Build configuration list for PBXNativeTarget "DBTest" */;
+			buildPhases = (
+				C541F31914830D1B0045D502 /* Sources */,
+				C541F31A14830D1B0045D502 /* Frameworks */,
+				C541F31B14830D1B0045D502 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C541F33614830D280045D502 /* PBXTargetDependency */,
+			);
+			name = DBTest;
+			productName = DBTest;
+			productReference = C541F31D14830D1B0045D502 /* DBTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C58D52BA148306840084276B /* Dropbox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C58D52CB148306840084276B /* Build configuration list for PBXNativeTarget "Dropbox" */;
@@ -606,11 +702,22 @@
 			targets = (
 				D3196B821412FE180060E7C6 /* DropboxSDK */,
 				C58D52BA148306840084276B /* Dropbox */,
+				C541F31C14830D1B0045D502 /* DBTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C541F31B14830D1B0045D502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C541F32514830D1B0045D502 /* InfoPlist.strings in Resources */,
+				C541F32B14830D1B0045D502 /* Credits.rtf in Resources */,
+				C541F33114830D1B0045D502 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C58D52B9148306840084276B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,6 +736,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C541F31914830D1B0045D502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C541F32814830D1B0045D502 /* main.m in Sources */,
+				C541F32E14830D1B0045D502 /* DBTestAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C58D52B6148306840084276B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -710,6 +826,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C541F33614830D280045D502 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C58D52BA148306840084276B /* Dropbox */;
+			targetProxy = C541F33514830D280045D502 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C541F32314830D1B0045D502 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C541F32414830D1B0045D502 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C541F32914830D1B0045D502 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C541F32A14830D1B0045D502 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C541F32F14830D1B0045D502 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C541F33014830D1B0045D502 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -737,6 +888,51 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		C541F33314830D1B0045D502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DBTest/DBTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DBTest/DBTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C541F33414830D1B0045D502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DBTest/DBTest-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "DBTest/DBTest-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -866,6 +1062,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C541F33214830D1B0045D502 /* Build configuration list for PBXNativeTarget "DBTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C541F33314830D1B0045D502 /* Debug */,
+				C541F33414830D1B0045D502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		C58D52CB148306840084276B /* Build configuration list for PBXNativeTarget "Dropbox" */ = {
 			isa = XCConfigurationList;

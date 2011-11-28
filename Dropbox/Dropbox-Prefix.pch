@@ -7,3 +7,20 @@
 #endif
 
 #include <TargetConditionals.h>
+
+/* Hide SBJSON symbols from apps that link to us. */
+#define SBJSON DropboxPrivate_SBJSON
+#define SBJsonBase DropboxPrivate_SBJsonBase
+#define SBJsonParser DropboxPrivate_SBJsonParser
+#define SBJsonWriter DropboxPrivate_SBJsonWriter
+
+/* Hide MPOAuth symbols from apps that link to us. */
+#define MPOAuthAPI DropboxPrivate_MPOAuthAPI
+#define MPOAuthAPIRequestLoader DropboxPrivate_MPOAuthAPIRequestLoader
+#define MPOAuthAuthenticationMethod DropboxPrivate_MPOAuthAuthenticationMethod
+#define MPOAuthAuthenticationMethodOAuth DropboxPrivate_MPOAuthAuthenticationMethodOAuth
+#define MPOAuthConnection DropboxPrivate_MPOAuthConnection
+#define MPOAuthCredentialConcreteStore DropboxPrivate_MPOAuthCredentialConcreteStore
+#define MPOAuthSignatureParameter DropboxPrivate_MPOAuthSignatureParameter
+#define MPOAuthURLRequest DropboxPrivate_MPOAuthURLRequest
+#define MPOAuthURLResponse DropboxPrivate_MPOAuthURLResponse

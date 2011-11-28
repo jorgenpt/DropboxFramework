@@ -276,11 +276,15 @@ static NSString *kDBDropboxUnknownUserId = @"unknown";
 - (BOOL)appConformsToScheme {
     NSString *appScheme = [self appScheme];
 
+#if TARGET_OS_IPHONE
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
     NSData *plistData = [NSData dataWithContentsOfFile:plistPath];
     NSDictionary *loadedPlist = 
             [NSPropertyListSerialization 
              propertyListFromData:plistData mutabilityOption:0 format:NULL errorDescription:NULL];
+#else
+    NSDictionary *loadedPlist = [[NSBundle mainBundle] infoDictionary];
+#endif
 
     NSArray *urlTypes = [loadedPlist objectForKey:@"CFBundleURLTypes"];
     for (NSDictionary *urlType in urlTypes) {

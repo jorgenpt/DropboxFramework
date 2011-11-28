@@ -26,6 +26,8 @@
     id<DBRestClientDelegate> delegate;
 }
 
++ (id)restClientWithSharedSession;
+
 - (id)initWithSession:(DBSession*)session;
 - (id)initWithSession:(DBSession *)session userId:(NSString *)userId;
 

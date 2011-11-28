@@ -43,6 +43,11 @@
 
 @implementation DBRestClient
 
++ (id)restClientWithSharedSession
+{
+  return [[[self alloc] initWithSession:[DBSession sharedSession]] autorelease];
+}
+
 - (id)initWithSession:(DBSession*)aSession userId:(NSString *)theUserId {
     if (!aSession) {
         DBLogError(@"DropboxSDK: cannot initialize a DBRestClient with a nil session");

@@ -158,18 +158,21 @@ static NSString *kDBDropboxUnknownUserId = @"unknown";
     NSUInteger sha_32 = htonl(((NSUInteger *)md)[CC_SHA1_DIGEST_LENGTH/sizeof(NSUInteger) - 1]);
     NSString *secret = [NSString stringWithFormat:@"%x", sha_32];
     
-    NSString *urlStr = nil;
-    
+    NSString *urlStr = [NSString stringWithFormat:@"%@://%@/%@/connect?k=%@&s=%@%@", 
+                        kDBProtocolHTTPS, kDBDropboxWebHost, kDBDropboxAPIVersion,
+                        consumerKey, secret, userIdStr];
+
+#if TARGET_OS_IPHONE
     NSURL *dbURL =
         [NSURL URLWithString:[NSString stringWithFormat:@"%@://%@/connect", kDBProtocolDropbox, kDBDropboxAPIVersion]];
     if ([[UIApplication sharedApplication] canOpenURL:dbURL]) {
         urlStr = [NSString stringWithFormat:@"%@?k=%@&s=%@%@", dbURL, consumerKey, secret, userIdStr];
-    } else {
-        urlStr = [NSString stringWithFormat:@"%@://%@/%@/connect?k=%@&s=%@%@", 
-            kDBProtocolHTTPS, kDBDropboxWebHost, kDBDropboxAPIVersion, consumerKey, secret, userIdStr];
     }
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+#else
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:urlStr]];
+#endif
 }
 
 - (void)link {
